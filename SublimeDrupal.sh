@@ -52,8 +52,25 @@ if [ -d /usr/bin/phpcs ]; then
   sudo ln -s "$phpcs" /usr/bin/phpcs
 fi
 
-# Default Preferences
-git clone https://github.com/rypit/drupal-sublime-config.git DrupalSublimeConfig;
+# Default Preferences fork for enzo
+git clone https://github.com/enzolutions/drupal-sublime-config.git DrupalSublimeConfig;
+
+# Goto Documentation
+git clone https://github.com/kemayo/sublime-text-2-goto-documentation
+
+# Synced SideBar
+git clone git://github.com/sobstel/SyncedSideBar
+
+# Traling Spaces
+git clone https://github.com/SublimeText/TrailingSpaces.git
+
+# Git
+#git clone https://github.com/kemayo/sublime-text-2-git.git
+
+# fetch specific color schemas for soda theme
+cd "Theme - Soda"
+wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip 
+unzip colour-schemes.zip
 
 # Back up old settings file
 echo "Backing up previous version of Preferences.sublime-settings..."
