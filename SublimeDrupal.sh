@@ -64,6 +64,9 @@ git clone git://github.com/sobstel/SyncedSideBar
 # Traling Spaces
 git clone https://github.com/SublimeText/TrailingSpaces.git
 
+# Drupal AutoComplete
+git clone git://github.com/tanc/st2-drupal-autocomplete.git
+
 # Git
 #git clone https://github.com/kemayo/sublime-text-2-git.git
 
