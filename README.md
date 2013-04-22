@@ -45,6 +45,9 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li>CTRL + Shift + t: Delete the trailing spaces</li>
   <li>Super + Shift + a: Go to Drupal Api definition of selected function</li>
   <li>Super + Shift + h: Go to documentation of selected function for languages PHP/JS and others</li>
+  <li>Super + b: Validate Drupal Code Standard in current file</li>
 </ul>
+
+<p>Super Key stands for Command in Mac and Windows Key in Windows</p>
 
 <p>Orginally forked from <a href="https://github.com/phase2/sublime-drupal/">https://github.com/phase2/sublime-drupal/</a></p>
