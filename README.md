@@ -3,7 +3,7 @@ sublime-drupal
 
 Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
 
-The installer include a set of plugins and configure the environment to speed up the Drupal Development process.
+<p>The installer include plugins and settings to configure the environment in order to speed up the Drupal Development process.</p>
 
 <h2>Plugins Included</h2>
 
