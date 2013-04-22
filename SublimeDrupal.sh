@@ -70,6 +70,9 @@ git clone git://github.com/tanc/st2-drupal-autocomplete.git
 # Git
 #git clone https://github.com/kemayo/sublime-text-2-git.git
 
+# Soda Theme
+git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+
 # fetch specific color schemas for soda theme
 cd "Theme - Soda"
 wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip 
