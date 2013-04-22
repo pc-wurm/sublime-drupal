@@ -22,7 +22,7 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
 </ul>
 
 <h3>Installer requirements</h3>
-<p>If you are install in mac you must install wget command, you can follow the guide <a href="http://osxdaily.com/2012/05/22/install-wget-mac-os-x/">http://osxdaily.com/2012/05/22/install-wget-mac-os-x/</a></p>
+<p>If you are installing in mac you must to install the wget command, you can follow the guide <a href="http://osxdaily.com/2012/05/22/install-wget-mac-os-x/">http://osxdaily.com/2012/05/22/install-wget-mac-os-x/</a></p>
 
 <h2>How to install</h2>
 
