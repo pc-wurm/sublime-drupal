@@ -44,5 +44,6 @@ The installer include a set of plugins and configure the environment to speed up
   <li>CTRL + Shift + t: Delete the trailing spaces</li>
   <li>Super + Shift + a: Go to Drupal Api definition of selected function</li>
   <li>Super + Shift + h: Go to documentation of selected function for languages PHP/JS and others</li>
-  <li></li>
 </ul>
+
+<p>Orginally forked from <a href="https://github.com/phase2/sublime-drupal/">https://github.com/phase2/sublime-drupal/</a></p>
