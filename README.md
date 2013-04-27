@@ -9,6 +9,7 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
 
 <ul>
   <li><a href="https://github.com/wbond/sublime_package_control">Package Control</a></li>
+  <li>Git</li>
   <li><a href="http://github.com/facelessuser/BracketHighlighter">Bracket Highlighter</a></li>
   <li><a href=" https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></li>
   <li><a href="http://github.com/spadgos/sublime-jsdocs">LiveCSS</a></li>
