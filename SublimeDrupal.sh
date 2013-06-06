@@ -114,6 +114,8 @@ else
   cd ..
 fi
 
+cp DrupalSublimeConfig/PHP.sublime-settings User/PHP.sublime-settings
+
 # Goto Documentation
 if [ ! -d "sublime-text-2-goto-documentation" ]; then
  git clone https://github.com/kemayo/sublime-text-2-goto-documentation;
@@ -163,6 +165,18 @@ else
   git pull origin master
   cd ..
 fi
+
+#SublimeLinter
+if [ ! -d "SublimeLinter" ]; then
+ git clone git://github.com/SublimeLinter/SublimeLinter.git
+else
+  echo "Updating plugin SublimeLinter";
+  cd "SublimeLinter"
+  git pull origin master
+  cd ..
+fi
+
+git://github.com/SublimeLinter/SublimeLinter.git
 
 # Soda Theme
 if [ ! -d "Theme - Soda" ]; then
