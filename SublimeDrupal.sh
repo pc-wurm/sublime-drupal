@@ -43,7 +43,7 @@ fi
 echo "Linking up settings PHP.sublime-settings..."
 ln -fs "$st2Dir"DrupalSublimeConfig/PHP.sublime-settings "$st2UserDir"PHP.sublime-settings;
 
-# Back up old PHP settings file
+# Back up old Preferences settings file
 if [ -f "$st2UserDir"Preferences.sublime-settings ]; then
   echo "Backing up previous version of Preferences.sublime-settings...";
   sudo cp -Lf "$st2UserDir"Preferences.sublime-settings "$st2UserDir"Preferences.sublime-settings.bak;
@@ -52,6 +52,16 @@ fi
 # Link up new settings file
 echo "Linking up settings Preferences.sublime-settings..."
 ln -fs "$st2Dir"DrupalSublimeConfig/Preferences.sublime-settings "$st2Settings";
+
+# Back up old SublimeLinter settings file
+if [ -f "$st2UserDir"SublimeLinter.sublime-settings ]; then
+  echo "Backing up previous version of SublimeLinter.sublime-settings...";
+  sudo cp -Lf "$st2UserDir"SublimeLinter.sublime-settings "$st2UserDir"SublimeLinter.sublime-settings.bak;
+fi
+
+# Link up new settings file
+echo "Linking up settings SublimeLinter.sublime-settings..."
+ln -fs "$st2Dir"DrupalSublimeConfig/SublimeLinter.sublime-settings "$st2UserDir"SublimeLinter.sublime-settings;
 
 # Clone all the plugins!
 if [ ! -d "PACKAGE CONTROL" ]; then
