@@ -13,14 +13,45 @@ else
   st2Dir=~/"Library/Application Support/Sublime Text 2/Packages/"
 fi
 
+# Navigate to Packages DirectoryCKAGE
+cd "$st2Dir";
+
 # User Packages Directory
 st2UserDir="$st2Dir"User/;
 
 # Default Settings File
 st2Settings="$st2UserDir"Preferences.sublime-settings;
 
-# Navigate to Packages Directory
-cd "$st2Dir";
+
+# Default Preferences fork for enzo
+if [ ! -d "DrupalSublimeConfig" ]; then
+ git clone https://github.com/enzolutions/drupal-sublime-config.git DrupalSublimeConfig;
+else
+  echo "Updating plugin DrupalSublimeConfig";
+  cd "DrupalSublimeConfig"
+  git pull origin master
+  cd ..
+fi
+
+# Back up old PHP settings file
+if [ -f "$st2UserDir"PHP.sublime-settings ]; then
+  echo "Backing up previous version of PHP.sublime-settings...";
+  sudo cp -Lf "$st2UserDir"PHP.sublime-settings "$st2UserDir"PHP.sublime-settings.bak;
+fi
+
+# Link up new PHP settings file
+echo "Linking up settings PHP.sublime-settings..."
+ln -fs "$st2Dir"DrupalSublimeConfig/PHP.sublime-settings "$st2UserDir"PHP.sublime-settings;
+
+# Back up old PHP settings file
+if [ -f "$st2UserDir"Preferences.sublime-settings ]; then
+  echo "Backing up previous version of Preferences.sublime-settings...";
+  sudo cp -Lf "$st2UserDir"Preferences.sublime-settings "$st2UserDir"Preferences.sublime-settings.bak;
+fi
+
+# Link up new settings file
+echo "Linking up settings Preferences.sublime-settings..."
+ln -fs "$st2Dir"DrupalSublimeConfig/Preferences.sublime-settings "$st2Settings";
 
 # Clone all the plugins!
 if [ ! -d "PACKAGE CONTROL" ]; then
@@ -104,18 +135,6 @@ if [ -d /usr/bin/phpcs ]; then
   sudo ln -s "$phpcs" /usr/bin/phpcs
 fi
 
-# Default Preferences fork for enzo
-if [ ! -d "DrupalSublimeConfig" ]; then
- git clone https://github.com/enzolutions/drupal-sublime-config.git DrupalSublimeConfig;
-else
-  echo "Updating plugin DrupalSublimeConfig";
-  cd "DrupalSublimeConfig"
-  git pull origin master
-  cd ..
-fi
-
-cp DrupalSublimeConfig/PHP.sublime-settings User/PHP.sublime-settings
-
 # Goto Documentation
 if [ ! -d "sublime-text-2-goto-documentation" ]; then
  git clone https://github.com/kemayo/sublime-text-2-goto-documentation;
@@ -176,18 +195,15 @@ else
   cd ..
 fi
 
-git://github.com/SublimeLinter/SublimeLinter.git
-
 # Soda Theme
 if [ ! -d "Theme - Soda" ]; then
- git clone https://github.com/buymeasoda/soda-theme/"Theme - Soda"
+ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
 else
   echo "Updating plugin Theme - Soda";
   cd "Theme - Soda"
   git pull origin master
   cd ..
 fi
-
 
 # fetch specific color schemas for soda theme
 
@@ -199,13 +215,5 @@ else
  wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip   
 fi	
 yes | unzip colour-schemes.zip
-
-# Back up old settings file
-echo "Backing up previous version of Preferences.sublime-settings..."
-sudo cp -Lf "$st2Settings" "$st2Settings".bak
-
-# Link up new settings file
-echo "Linking up settings Preferences.sublime-settings..."
-ln -fs "$st2Dir"DrupalSublimeConfig/Preferences.sublime-settings "$st2Settings";
 
 echo "Done";
