@@ -63,6 +63,16 @@ fi
 echo "Linking up settings SublimeLinter.sublime-settings..."
 ln -fs "$st2Dir"DrupalSublimeConfig/SublimeLinter.sublime-settings "$st2UserDir"SublimeLinter.sublime-settings;
 
+# Back up old GitGutter settings file
+if [ -f "$st2UserDir"GitGutter.sublime-settings ]; then
+  echo "Backing up previous version of SGitGutter.sublime-settings...";
+  sudo cp -Lf "$st2UserDir"GitGutter.sublime-settings "$st2UserDir"GitGutter.sublime-settings.bak;
+fi
+
+# Link up new settings file
+echo "Linking up settings GitGutter.sublime-settings..."
+ln -fs "$st2Dir"DrupalSublimeConfig/GitGutter.sublime-settings "$st2UserDir"GitGutter.sublime-settings;
+
 # Clone all the plugins!
 if [ ! -d "PACKAGE CONTROL" ]; then
   git clone https://github.com/wbond/sublime_package_control.git "Package Control";
@@ -136,7 +146,7 @@ else
 fi
 
 #PHP Syntax Checker
-#git clone git://github.com/naomichi-y/php_syntax_checker.git 
+#git clone git://github.com/naomichi-y/php_syntax_checker.git
 
 # Address pathing issues with DrupalCodingStandard's phpcs path
 if [ -d /usr/bin/phpcs ]; then
@@ -189,8 +199,28 @@ fi
 if [ ! -d "sublime-text-2-git" ]; then
  git clone https://github.com/kemayo/sublime-text-2-git.git;
 else
-  echo "Updating plugin sublime-text-2-git";
+  echo "Updating plugin Git";
   cd "sublime-text-2-git"
+  git pull origin master
+  cd ..
+fi
+
+# GitGutter
+if [ ! -d "GitGutter" ]; then
+ git clone git://github.com/jisaacks/GitGutter.git;
+else
+  echo "Updating plugin GitGutter";
+  cd "GitGutter"
+  git pull origin master
+  cd ..
+fi
+
+# SideBarGit
+if [ ! -d "SideBarGit" ]; then
+ git clone git://github.com/SublimeText/SideBarGit.git;
+else
+  echo "Updating plugin SideBarGit";
+  cd "SideBarGit"
   git pull origin master
   cd ..
 fi
@@ -219,11 +249,11 @@ fi
 
 cd "Theme - Soda"
 if [ ! -f "colour-schemes.zip" ]; then
- wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip; 
+ wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip;
 else
  rm colour-schemes.zip
- wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip   
-fi	
+ wget http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip
+fi
 yes | unzip colour-schemes.zip
 
 echo "Done";

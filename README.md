@@ -10,6 +10,8 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
 <ul>
   <li><a href="https://github.com/wbond/sublime_package_control">Package Control</a></li>
   <li><a href="https://github.com/kemayo/sublime-text-2-git">Git</a></li>
+  <li><a href="https://github.com/jisaacks/GitGutter">Git Gutter</a></li>
+  <li><a href="https://github.com/SublimeText/SideBarGit">SideBarGit</a></li>
   <li><a href="http://github.com/facelessuser/BracketHighlighter">Bracket Highlighter</a></li>
   <li><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></li>
   <li><a href="git://github.com/niklas-heer/sublime-css-colors.git">LiveCSS</a></li>
@@ -52,7 +54,9 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li>Super + Shift + a: Go to Drupal Api definition of selected function</li>
   <li>Super + Shift + h: Go to documentation of selected function for languages PHP/JS and others</li>
   <li>Super + b: Validate Drupal Code Standard in current file</li>
-  <li>Super + Shift + e</li>
+  <li>Super + Shift + e: Execute verification of errors</li>
+  <li>Super + Shift + Option + k: Jump to previous Git modification</li>
+  <li>Super + Shift + Option + j: Jump to next Git modification</li>
 
 </ul>
 
