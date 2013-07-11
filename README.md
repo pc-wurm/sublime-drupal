@@ -23,7 +23,10 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li><a href="https://github.com/tanc/st2-drupal-autocomplete">Drupal Auto Complete</a></li>
   <li><a href="https://github.com/SublimeLinter/SublimeLinter">SublimeLinter</a></li>
   <li><a href="https://github.com/buymeasoda/soda-theme/">Sode Theme</a></li>
+  <li>* <a href="https://github.com/afterdesign/MacTerminal">MacTerminal</a></li>
 </ul>
+
+<p><strong> * </strong>= Only available for MacOSX</p>
 
 <h3>Installer requirements</h3>
 <p>If you are installing in mac you must to install the wget command, you can follow the guide <a href="http://osxdaily.com/2012/05/22/install-wget-mac-os-x/">http://osxdaily.com/2012/05/22/install-wget-mac-os-x/</a></p>

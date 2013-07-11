@@ -195,6 +195,17 @@ else
   cd ..
 fi
 
+# To-Do: Test other version  right now takes to much time
+# Find Function Definition
+#if [ ! -d "sublime-find-function-definition" ]; then
+# git clone git://github.com/timdouglas/sublime-find-function-definition.git;
+#else
+#  echo "Updating Find Function Definition";
+#  cd "sublime-find-function-definition"
+#  git pull origin master
+#  cd ..
+#fi
+
 # Git
 if [ ! -d "sublime-text-2-git" ]; then
  git clone https://github.com/kemayo/sublime-text-2-git.git;
@@ -225,7 +236,7 @@ else
   cd ..
 fi
 
-#SublimeLinter
+# SublimeLinter
 if [ ! -d "SublimeLinter" ]; then
  git clone git://github.com/SublimeLinter/SublimeLinter.git
 else
@@ -233,6 +244,31 @@ else
   cd "SublimeLinter"
   git pull origin master
   cd ..
+fi
+
+#Specific plugings for MAC
+if [ $os != 'Linux' ]; then
+  # MacTerminal
+  if [ ! -d "MacTerminal" ]; then
+     git clone https://github.com/afterdesign/MacTerminal.git
+   else
+    echo "Updating plugin MacTerminal";
+    cd "MacTerminal"
+    git pull origin master
+    cd ..
+  fi
+
+   if [ -d "/Applications/iTerm.app" ]; then
+    # Back up old MacTerminal settings file
+    if [ -f "$st2UserDir"MacTerminal.sublime-settings ]; then
+      echo "Backing up previous version of MacTerminal.sublime-settings...";
+      sudo cp -Lf "$st2UserDir"MacTerminal.sublime-settings "$st2UserDir"MacTerminal.sublime-settings.bak;
+    fi
+
+    # Link up new PHP settings file
+    echo "Linking up settings MacTerminal.sublime-settings..."
+    ln -fs "$st2Dir"DrupalSublimeConfig/MacTerminal.sublime-settings "$st2UserDir"MacTerminal.sublime-settings;
+   fi
 fi
 
 # Soda Theme
