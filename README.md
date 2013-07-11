@@ -23,7 +23,7 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li><a href="https://github.com/tanc/st2-drupal-autocomplete">Drupal Auto Complete</a></li>
   <li><a href="https://github.com/SublimeLinter/SublimeLinter">SublimeLinter</a></li>
   <li><a href="https://github.com/buymeasoda/soda-theme/">Sode Theme</a></li>
-  <li>* <a href="https://github.com/afterdesign/MacTerminal">MacTerminal <small>(support to <a href="www.iterm2.com">iTerm</a> if is available.)</small></a></li>
+  <li>* <a href="https://github.com/afterdesign/MacTerminal">MacTerminal</a> <small>(support to <a href="www.iterm2.com">iTerm</a> if is available.)</small></li>
 </ul>
 
 <p><strong> * </strong>= Only available for MacOSX</p>
