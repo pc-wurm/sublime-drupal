@@ -246,6 +246,16 @@ else
   cd ..
 fi
 
+# SASS
+if [ ! -d "SASS" ]; then
+ git clone git@github.com:nathos/sass-textmate-bundle.git SASS;
+else
+  echo "Updating plugin SASS";
+  cd "SASS"
+  git pull origin master
+  cd ..
+fi
+
 #Specific plugings for MAC
 if [ $os != 'Linux' ]; then
   # MacTerminal
