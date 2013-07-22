@@ -62,6 +62,7 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li>Super + Shift + e: Execute verification of errors</li>
   <li>Super + Shift + Option + k: Jump to previous Git modification</li>
   <li>Super + Shift + Option + j: Jump to next Git modification</li>
+  <li>Super + Shift + 1: Reveal file in SideBar</li>
   <li>* CTRL + Command + t</li>
 
 </ul>
