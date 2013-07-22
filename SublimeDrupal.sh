@@ -256,6 +256,16 @@ else
   cd ..
 fi
 
+# CssSnippets
+if [ ! -d "CssSnippets" ]; then
+ git clone git@github.com:P233/Emmet-Css-Snippets-for-Sublime-Text-2.git CssSnippets;
+else
+  echo "Updating plugin CssSnippets";
+  cd "CssSnippets"
+  git pull origin master
+  cd ..
+fi
+
 #Specific plugings for MAC
 if [ $os != 'Linux' ]; then
   # MacTerminal
