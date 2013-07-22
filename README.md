@@ -24,8 +24,8 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
   <li><a href="https://github.com/SublimeLinter/SublimeLinter">SublimeLinter</a></li>
   <li><a href="https://github.com/buymeasoda/soda-theme/">Sode Theme</a></li>
   <li><a href="https://github.com/nathos/sass-textmate-bundle">SASS</a></li>
-  <li><a href="https://github.com/P233/Emmet-Css-Snippets-for-Sublime-Text-2">Css Snippets</a> <small>(<a href="http://peters-playground.com/Emmet-Css-Snippets-for-Sublime-Text-2/">List of snippets</a></small>)</li>
-  <li>* <a href="https://github.com/afterdesign/MacTerminal">MacTerminal</a> <small>(support to <a href="www.iterm2.com">iTerm</a> if is available.)</small></li>
+  <li><a href="https://github.com/P233/Emmet-Css-Snippets-for-Sublime-Text-2">Css Snippets</a> <small>(<a target='_blank' href="http://peters-playground.com/Emmet-Css-Snippets-for-Sublime-Text-2/">list of snippets</a></small>)</li>
+  <li>* <a href="https://github.com/afterdesign/MacTerminal">MacTerminal</a> <small>(support to <a target='_blank' href="http://www.iterm2.com">iTerm</a> if is available.)</small></li>
 </ul>
 
 <p><strong> * </strong>= Only available for MacOSX</p>
