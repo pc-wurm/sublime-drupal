@@ -46,10 +46,10 @@ Script to setup a Sublime Text 2 editor for Drupal development (Mac & Linux)
 <h3>Installation Notes</h3>
 
 <h4>Drupal Coding Standard</h4>
-  <p>To use the  Drupal Coding Standard plugin you have to install before PHP Code Sniffer , you check the installation process at <a href="http://drupal.org/node/1419988">http://drupal.org/node/1419988</a></p>
+  <p>To use the Drupal Coding Standard plugin you have to install before PHP Code Sniffer, you check the installation process at <a href="http://drupal.org/node/1419988">http://drupal.org/node/1419988</a></p>
 
-<h4>Drupal Auto Compelte</h4>
-  <p>To use the  Drupal Auto Complete, you need to create a SublimeProject and save the project definition at the drupal document root where index.php is located</p>
+<h4>Drupal Auto Complete</h4>
+  <p>To use the Drupal Auto Complete, you need to create a SublimeProject and save the project definition at the drupal document root where index.php is located</p>
 
 <h2>Key Binding</h2>
 
